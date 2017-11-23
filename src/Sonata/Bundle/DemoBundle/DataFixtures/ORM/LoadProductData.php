@@ -1154,6 +1154,7 @@ EOF
             ->name('*.jpg')
             ->in(__DIR__.'/../data/files/sylvain-switzerland');
 
+        $counter = 0;
         foreach ($files as $pos => $file) {
             $media = $this->getMediaManager()->create();
             $media->setBinaryContent($file);
@@ -1169,10 +1170,11 @@ EOF
 
             $galleryHasMedia = new GalleryHasMedia();
             $galleryHasMedia->setMedia($media);
-            $galleryHasMedia->setPosition($pos + 1);
+            $galleryHasMedia->setPosition($counter + 1);
             $galleryHasMedia->setEnabled(true);
 
             $gallery->addGalleryHasMedias($galleryHasMedia);
+            $counter++;
         }
 
         $this->getGalleryManager()->update($gallery);
@@ -1199,6 +1201,7 @@ EOF
 
         $a = 1;
 
+        $counter = 0;
         foreach ($files as $pos => $file) {
             $media = $this->getMediaManager()->create();
             $media->setBinaryContent($file);
@@ -1214,12 +1217,13 @@ EOF
 
             $galleryHasMedia = new GalleryHasMedia();
             $galleryHasMedia->setMedia($media);
-            $galleryHasMedia->setPosition($pos + 1);
+            $galleryHasMedia->setPosition($counter + 1);
             $galleryHasMedia->setEnabled(true);
 
             $gallery->addGalleryHasMedias($galleryHasMedia);
 
             ++$a;
+            $counter++;
         }
 
         $files = Finder::create()
@@ -1228,6 +1232,7 @@ EOF
 
         $b = 1;
 
+        $counter = 0;
         foreach ($files as $pos => $file) {
             $media = $this->getMediaManager()->create();
             $media->setBinaryContent($file);
@@ -1243,12 +1248,13 @@ EOF
 
             $galleryHasMedia = new GalleryHasMedia();
             $galleryHasMedia->setMedia($media);
-            $galleryHasMedia->setPosition($pos + 1);
+            $galleryHasMedia->setPosition($counter + 1);
             $galleryHasMedia->setEnabled(true);
 
             $gallery->addGalleryHasMedias($galleryHasMedia);
 
             ++$b;
+            $counter++;
         }
 
         $this->getGalleryManager()->update($gallery);
@@ -1273,6 +1279,7 @@ EOF
             ->name('*.jpg')
             ->in(__DIR__.'/../data/files/gilles-canada');
 
+        $counter = 0;
         foreach ($files as $pos => $file) {
             $media = $this->getMediaManager()->create();
             $media->setBinaryContent($file);
@@ -1288,16 +1295,18 @@ EOF
 
             $galleryHasMedia = new GalleryHasMedia();
             $galleryHasMedia->setMedia($media);
-            $galleryHasMedia->setPosition($pos + 1);
+            $galleryHasMedia->setPosition($counter + 1);
             $galleryHasMedia->setEnabled(true);
 
             $gallery->addGalleryHasMedias($galleryHasMedia);
+            $counter++;
         }
 
         $files = Finder::create()
             ->name('*.jpg')
             ->in(__DIR__.'/../data/files/hugo-canada');
 
+        $counter = 0;
         foreach ($files as $pos => $file) {
             $media = $this->getMediaManager()->create();
             $media->setBinaryContent($file);
@@ -1313,10 +1322,11 @@ EOF
 
             $galleryHasMedia = new GalleryHasMedia();
             $galleryHasMedia->setMedia($media);
-            $galleryHasMedia->setPosition($pos + 1);
+            $galleryHasMedia->setPosition($counter + 1);
             $galleryHasMedia->setEnabled(true);
 
             $gallery->addGalleryHasMedias($galleryHasMedia);
+            $counter++;
         }
 
         $this->getGalleryManager()->update($gallery);
@@ -1341,6 +1351,7 @@ EOF
             ->name('*.jpg')
             ->in(__DIR__.'/../data/files/maha-japan');
 
+        $counter = 0;
         foreach ($files as $pos => $file) {
             $media = $this->getMediaManager()->create();
             $media->setBinaryContent($file);
@@ -1356,10 +1367,11 @@ EOF
 
             $galleryHasMedia = new GalleryHasMedia();
             $galleryHasMedia->setMedia($media);
-            $galleryHasMedia->setPosition($pos + 1);
+            $galleryHasMedia->setPosition($counter + 1);
             $galleryHasMedia->setEnabled(true);
 
             $gallery->addGalleryHasMedias($galleryHasMedia);
+            $counter++;
         }
 
         $this->getGalleryManager()->update($gallery);
